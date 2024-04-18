@@ -7,7 +7,7 @@ const Box = (props) => {
   const [active, setActive] = useState(false);
 
   useFrame((state, delta) => {
-    return (meshRef.current.rotation.x += delta);
+    meshRef.current.rotation.x += delta;
   });
 
   const handleClick = (e) => {
@@ -35,7 +35,7 @@ const Box = (props) => {
       onPointerOut={handlePointerOut}
     >
       <boxGeometry args={[2, 2, 2]} />
-      <meshStandardMaterial color={hovered ? "royalblue" : "orange"} />
+      <meshStandardMaterial color={hovered ? 0xff0000 : 0x066ff} />
     </mesh>
   );
 };
